@@ -1,9 +1,12 @@
 var path = require('path');
 
+const dropbox_dir = '/Users/yumochi21/Dropbox/Customize/modules';
+
 module.exports = {
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    // path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(dropbox_dir, 'dist'),
+    filename: 'kintone-viewer.js'
   },
   module: {
     rules: [
