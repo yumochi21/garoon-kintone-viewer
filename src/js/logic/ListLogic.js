@@ -4,7 +4,7 @@ import EventSetter from './EventSetter';
 const ListLogic = {
 
   setAppList() {
-    return App.getAppList().then(response => {
+    return App.getAppList('【Gr⇔kin連携】').then(response => {
       const apps = response.apps;
       const $list = $('<div>');
       apps.forEach(app => {
@@ -13,6 +13,7 @@ const ListLogic = {
         $list.append($item);
       });
 
+      $('.kv-app-list').html('');
       $('.kv-app-list').append($list);
     });
   }
